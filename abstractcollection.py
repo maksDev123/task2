@@ -7,19 +7,19 @@ class AbstractCollection(object):
     """An abstract collection implementation."""
 
     # Constructor
-    def __init__(self, sourceCollection = None):
+    def __init__(self, source_collection = None):
         """Sets the initial state of self, which includes the
         contents of sourceCollection, if it's present."""
         self._size = 0
-        if sourceCollection:
-            for item in sourceCollection:
+        if source_collection:
+            for item in source_collection:
                 self.add(item)
 
     # Accessor methods
     def isEmpty(self):
         """Returns True if len(self) == 0, or False otherwise."""
         return len(self) == 0
-    
+
     def __len__(self):
         """Returns the number of items in self."""
         return self._size
